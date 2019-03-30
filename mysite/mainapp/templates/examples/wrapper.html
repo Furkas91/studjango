@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device_width initial_scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <title>Power</title>
+</head>
+<body>
+    <div class="jumbotron">
+    <div class="container">
+        <h1>{% include "examples/includes/include_one.html" %}</h1>
+        {% block content %}
+        {% endblock %}
+        <p>
+            <a href="/" class="btn btn-success btn-lg">Главная страница</a>
+            <a href="/news" class="btn btn-primary btn-lg">Новости &raquo;</a>
+            <a href="/contacts" class="btn btn-info btn-lg">Контакты</a>
+        </p>
+    </div>
+  </div>
+  <div class="container">
+    <img src="{% static 'examples/image/bmw.jpg' %}" class="img-thumbnail">
+    <hr>
+      &copy; Все права защищены 2018
+  </div>
+</body>
+</html>
